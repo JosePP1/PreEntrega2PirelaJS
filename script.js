@@ -56,8 +56,6 @@ function crearTablero() {
     }
 }
 
-/*crearTablero()*/
-
 function iniciar() {
     let iniciarJuego = false;
 
