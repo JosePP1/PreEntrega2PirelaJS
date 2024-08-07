@@ -107,21 +107,21 @@ function checkMatch() {
         location.reload()
     }
 
-    if (cartasGanadas.length === cartasArray.length/2) {
+    if (cartasGanadas.length === cartasArray.length / 2) {
         resultadoDisplay.innerHTML = "¡Felicitaciones, acertaste todas!"
     }
 }
 
 function flipCard() {
-   const cartaId = this.getAttribute("data-id")
-   cartasElegidas.push(cartasArray[cartaId].name)
-   this.setAttribute("src", cartasArray[cartaId].img)
-   cartasElegidasId.push(cartaId)
-   //console.log(cartasElegidas)
-   //console.log(cartasElegidasId)
-   if (cartasElegidas.length === 2) {
-    setTimeout( checkMatch, 500);
-   }
+    const cartaId = this.getAttribute("data-id")
+    cartasElegidas.push(cartasArray[cartaId].name)
+    this.setAttribute("src", cartasArray[cartaId].img)
+    cartasElegidasId.push(cartaId)
+    console.log(cartasElegidas)
+    console.log(cartasElegidasId)
+    if (cartasElegidas.length === 2) {
+        setTimeout(checkMatch, 500);
+    }
 }
 
 iniciar();
