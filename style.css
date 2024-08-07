@@ -1,0 +1,40 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+main {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100px;
+}
