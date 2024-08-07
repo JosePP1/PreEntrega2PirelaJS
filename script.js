@@ -46,7 +46,7 @@ let cartasElegidasId = []
 const cartasFallidas = []
 const cartasGanadas = []
 
-function createBoard() {
+function crearTablero() {
     for (let i = 0; i < cartasArray.length; i++) {
         const carta = document.createElement("img")
         carta.setAttribute("src", "images/code.svg")
@@ -56,7 +56,21 @@ function createBoard() {
     }
 }
 
-createBoard()
+/*crearTablero()*/
+
+function iniciar() {
+    let iniciarJuego = false;
+
+    while (!iniciarJuego) {
+        const entradaUsuario = prompt('Escribe "iniciar" para iniciar el juego:');
+        if (entradaUsuario && entradaUsuario.toLowerCase() === 'iniciar') {
+            crearTablero();
+            iniciarJuego = true;
+        } else {
+            alert('Debes escribir "iniciar" para iniciar el juego.');
+        }
+    }
+}
 
 function checkMatch() {
     const cartas = document.querySelectorAll("img")
@@ -109,3 +123,5 @@ function flipCard() {
     setTimeout( checkMatch, 500);
    }
 }
+
+iniciar();
